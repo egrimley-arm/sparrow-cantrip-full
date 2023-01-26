@@ -73,6 +73,7 @@ pub struct ProcessManager {
 impl ProcessManager {
     // Creates a new ProcessManager instance.
     pub fn new(manager: impl ProcessManagerInterface + Sync + 'static) -> ProcessManager {
+        log::info!("xx in ProcessManager::new");
         ProcessManager {
             manager: Box::new(manager),
             bundles: HashMap::with_capacity(DEFAULT_BUNDLES_CAPACITY),

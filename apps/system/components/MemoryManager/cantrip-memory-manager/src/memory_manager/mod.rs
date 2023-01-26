@@ -99,6 +99,7 @@ impl MemoryManager {
     // Creates a new MemoryManager instance. The allocator is seeded
     // from the untyped memory descriptors.
     pub fn new(slots: Range<seL4_CPtr>, untypeds: &[seL4_UntypedDesc]) -> Self {
+        log::info!("xx in MemoryManager::new");
         assert!(!untypeds.is_empty());
         assert_eq!(slots.end - slots.start, untypeds.len());
         let mut m = MemoryManager {
