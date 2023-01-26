@@ -27,7 +27,7 @@ if(NOT DEFINED RUST_GLOBAL_FEATURES)
   message (FATAL_ERROR "`RUST_GLOBAL_FEATURES` is not defined")
 endif()
 
-set(CAMKES_APP "adder" CACHE STRING "The one and only CAmkES application in this project")
+set(CAMKES_APP "hellorust" CACHE STRING "The one and only CAmkES application in this project")
 #set(CAPDL_LOADER_APP "capdl-loader-app" CACHE STRING "")
 set(CAPDL_LOADER_APP "cantrip-os-rootserver" CACHE STRING "")
 
